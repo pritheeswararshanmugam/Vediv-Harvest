@@ -1,0 +1,13 @@
+---
+interface Props {
+  title: string;
+  align?: 'left' | 'center';
+}
+
+const { title, align = 'left' } = Astro.props;
+const alignmentClasses = align === 'center' ? 'text-center mx-auto' : 'text-left';
+---
+
+<h2 class={`font-heading text-4xl leading-tight text-clove md:text-5xl ${alignmentClasses}`}>
+  {title}
+</h2>

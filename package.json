@@ -1,0 +1,22 @@
+{
+  "name": "vedic-harvest",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "shots": "playwright test tests/section-photography.spec.ts --project=chromium",
+    "shots:report": "playwright show-report artifacts/playwright-report"
+  },
+  "devDependencies": {
+    "@astrojs/tailwind": "latest",
+    "@playwright/test": "^1.59.1",
+    "astro": "latest",
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest"
+  }
+}

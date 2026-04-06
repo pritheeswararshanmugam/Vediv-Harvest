@@ -1,0 +1,21 @@
+---
+interface Props {
+  label: string;
+  icon: string;
+}
+
+const { label, icon } = Astro.props;
+const iconValue = icon?.trim() ?? '';
+const isSvgMarkup = iconValue.startsWith('<svg');
+---
+
+<div class="inline-flex items-center gap-2 rounded-full bg-surface px-4 py-2 text-clove shadow-[0_10px_20px_rgba(62,39,35,0.06)]">
+  {
+    isSvgMarkup ? (
+      <span class="inline-flex h-4 w-4 items-center justify-center" set:html={iconValue} />
+    ) : (
+      <span class="inline-flex h-4 min-w-4 items-center justify-center text-sm leading-none">{iconValue}</span>
+    )
+  }
+  <span class="font-body text-xs font-semibold uppercase tracking-wide">{label}</span>
+</div>

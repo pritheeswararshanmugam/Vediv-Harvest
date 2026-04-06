@@ -1,0 +1,45 @@
+---
+import PillButton from '../ui/PillButton.astro';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  subtitle: string;
+  primaryCta: string;
+  secondaryCta: string;
+}
+
+const { eyebrow, title, subtitle, primaryCta, secondaryCta } = Astro.props;
+---
+
+<section class="relative flex min-h-screen items-center overflow-hidden">
+  <div class="absolute inset-0">
+    <img
+      src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=2200&q=80"
+      alt="A rich blend of Indian spices in warm, dramatic light"
+      class="h-full w-full object-cover"
+      loading="eager"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/75 via-black/65 to-black/50"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(253,184,19,0.14)_0%,transparent_42%)]"></div>
+  </div>
+
+  <div class="relative mx-auto w-full max-w-7xl px-6 pb-20 pt-28 md:px-10 lg:px-16">
+    <p class="font-body text-xs font-semibold uppercase tracking-[0.3em] text-white/90">{eyebrow}</p>
+
+    <h1 class="mt-5 max-w-4xl font-heading text-5xl leading-[1.06] text-white md:text-7xl lg:text-8xl">
+      {title}
+    </h1>
+
+    <p class="mt-7 max-w-2xl font-body text-lg leading-relaxed text-white/95 md:text-xl">
+      {subtitle}
+    </p>
+
+    <div class="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+      <PillButton text={primaryCta} href="/pantry" variant="primary" />
+      <div class="[&_a]:!border-white/60 [&_a]:!text-white [&_a]:hover:!bg-white/10 [&_button]:!border-white/60 [&_button]:!text-white [&_button]:hover:!bg-white/10">
+        <PillButton text={secondaryCta} href="/heritage" variant="secondary" />
+      </div>
+    </div>
+  </div>
+</section>

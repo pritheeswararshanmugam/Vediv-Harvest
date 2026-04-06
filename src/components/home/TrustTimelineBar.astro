@@ -1,0 +1,47 @@
+---
+import IconBadge from '../ui/IconBadge.astro';
+
+const steps = [
+  {
+    title: 'Hand-Picked Farms',
+    description: 'Sourced from heritage farms with seasonal harvesting discipline.',
+  },
+  {
+    title: 'Hygienic Sorting',
+    description: 'Every batch passes multi-point quality checks for purity and consistency.',
+  },
+  {
+    title: 'Your Table',
+    description: 'Freshly packed for daily cooking with bold aroma and trusted nutrition.',
+  },
+];
+---
+
+<section class="bg-dough py-14">
+  <div class="mx-auto max-w-7xl px-6 md:px-10">
+    <div class="mb-8 flex flex-wrap items-center gap-3">
+      <IconBadge label="100% Natural" icon="🌿" />
+      <IconBadge label="No Additives" icon="✓" />
+      <IconBadge label="Small Batch" icon="✦" />
+    </div>
+
+    <div class="flex flex-col gap-5 md:flex-row md:items-stretch">
+      {
+        steps.map((step, index) => (
+          <>
+            <article class="flex-1 rounded-[2rem] bg-surface p-6 shadow-[0_16px_32px_rgba(62,39,35,0.06)]">
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-turmeric font-body text-sm font-semibold text-clove">
+                {index + 1}
+              </span>
+              <h3 class="mt-4 font-heading text-2xl text-clove">{step.title}</h3>
+              <p class="mt-3 font-body text-sm leading-relaxed text-clove/75">{step.description}</p>
+            </article>
+            {index < steps.length - 1 ? (
+              <span class="hidden items-center justify-center px-1 font-heading text-3xl text-clove/45 md:flex">→</span>
+            ) : null}
+          </>
+        ))
+      }
+    </div>
+  </div>
+</section>

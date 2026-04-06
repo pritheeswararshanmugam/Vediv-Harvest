@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FloatingNav from '../components/site/FloatingNav.astro';
+import FooterArchive from '../components/site/FooterArchive.astro';
+
+const products = [
+  {
+    title: 'Alleppey Turmeric',
+    price: 'INR 245',
+    image:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuAQ7Fcb9oLvibWitCle6CmqWsRw1gfVJh7ISiaaCC3gDxfxhmz8R50UQiiD9Om-ZsydZVHqHrbyEEejisbuFuNdrm_tE88dy_eqIEz_iH9HW95pjkLnP72HKS2XsWRgwg_ip23X3GvhXK9IVBcS2SMTG7efrmEbEwY5xAQc0skwHbK0_WwgD6pq8P3_fKH_Q7rxpB_1nDxw4u5KFhX9uRqPweHST7GzJfz9840S5W3qlqt65OU22HbSrD5FgikNV-lAFsXkNKexDhE',
+  },
+  {
+    title: 'Crimson Masoor',
+    price: 'INR 180',
+    image:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuAbnf-NkzoiD64naQHj7xbNVxTgnCM0vYT5W8fO0MwvPmJtHyyHe_XTWnNvhBrhThO8krULkgZUVjTB7Y46YNhbC8FQLxDZalVJILJq-U9Achj1KKRIlDSsuhZSzA0kaQsDBYZ4xKfdpXGuFyIfB-gPto5JC21hhGNEZ7cv6vAmbtNjKe7He3Cqc2fota1-0Nuc-4GFQSpHQWxvOLXozcBSJO6l82Qiw3V8bm9iHrf3iDzQH6Q8gANeH68mL-Ljl4KKLAagc3FSAJE',
+  },
+  {
+    title: 'Vintage Basmati',
+    price: 'INR 890',
+    image:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuDstt1IrHSlWH5ZBOzcU0nv7Pc7t9pd8uVR7IbicyYcpiqdTg_kv3W1subBYScxPFOrQkyr0fAJ48eowawiX4GHBCGowO3_vzlm_klicW5m_NkshrlXKZeYLtevdjQf6Oz0Dn4O5Kliy303eDBbbcLueUybaUeNgAj3XQ_nfCF4bErS92I32l9O8QzUNMMvEMoNBV6zynPZIilLW979abed9M3RUTIyE5yrGXLFnt0y1CdKpeAaBIPjyI1zVEcj24I_1ViikhZpLSI',
+  },
+];
+---
+
+<BaseLayout
+  title="The Pantry | Vedic Harvest"
+  description="Explore Vedic Harvest pantry essentials, from single-origin spices to heritage grains."
+>
+  <FloatingNav />
+
+  <main class="pb-24 pt-32">
+    <section class="max-w-6xl mx-auto px-4 rounded-[2.2rem] bg-surface py-14 md:px-14 md:py-16">
+      <p class="font-body text-xs font-semibold uppercase tracking-[0.2em] text-clove/60">Curated Collection</p>
+      <h1 class="mt-4 font-heading text-5xl leading-tight text-clove md:text-6xl">The Ancestral Pantry</h1>
+      <p class="mt-6 max-w-3xl font-body text-lg leading-relaxed text-clove/78">
+        A focused catalog of high-integrity staples selected for aroma, nutrition, and everyday cooking confidence.
+      </p>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+      {
+        products.map((product) => (
+          <article class="overflow-hidden rounded-[2rem] bg-dough p-4 shadow-[0_14px_28px_rgba(62,39,35,0.08)] transition-transform duration-500 hover:-translate-y-2">
+            <img
+              src={product.image}
+              alt={product.title}
+              class="h-56 w-full rounded-t-xl object-cover"
+              loading="lazy"
+            />
+            <div class="px-2 pb-3 pt-5">
+              <h2 class="font-heading text-3xl text-clove">{product.title}</h2>
+              <p class="mt-2 font-body text-base font-semibold text-clove/80">{product.price}</p>
+            </div>
+          </article>
+        ))
+      }
+    </section>
+  </main>
+
+  <FooterArchive />
+</BaseLayout>

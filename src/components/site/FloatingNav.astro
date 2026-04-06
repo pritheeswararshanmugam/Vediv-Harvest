@@ -1,0 +1,28 @@
+---
+const navLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'Heritage', href: '/heritage' },
+  { label: 'Pantry', href: '/pantry' },
+];
+---
+
+<header class="fixed top-4 left-1/2 z-50 w-[min(96%,72rem)] -translate-x-1/2 px-2">
+  <nav class="relative flex items-center rounded-full bg-dough/80 px-4 py-3 backdrop-blur-2xl shadow-[0_20px_40px_rgba(62,39,35,0.06)] md:px-6">
+    <a href="/" class="font-heading text-xl tracking-tight text-clove">
+      VEDIC HARVEST
+    </a>
+
+    <ul class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 md:flex">
+      {navLinks.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class="font-body text-sm font-medium text-clove/85 transition-colors duration-300 hover:text-chili"
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>

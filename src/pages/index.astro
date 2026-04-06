@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FloatingNav from '../components/site/FloatingNav.astro';
+import FooterArchive from '../components/site/FooterArchive.astro';
+import HomeHero from '../components/home/HomeHero.astro';
+import TrustTimelineBar from '../components/home/TrustTimelineBar.astro';
+import CategoryBentoGrid from '../components/home/CategoryBentoGrid.astro';
+import LegacySplitStory from '../components/home/LegacySplitStory.astro';
+import RecipesTeaserGrid from '../components/home/RecipesTeaserGrid.astro';
+---
+
+<BaseLayout
+  title="Vedic Harvest | The Promise of the Finest Indian Food"
+  description="Premium Indian spices and pantry essentials crafted with heritage and purity since 1951."
+>
+  <FloatingNav />
+
+  <HomeHero
+    eyebrow="ESTABLISHED 1951"
+    title="The Promise of the Finest Indian Food."
+    subtitle="Uncompromised purity for your family, everyday."
+    primaryCta="Explore the Pantry"
+    secondaryCta="Our Heritage"
+  />
+
+  <TrustTimelineBar />
+
+  <CategoryBentoGrid />
+
+  <LegacySplitStory />
+
+  <RecipesTeaserGrid />
+
+  <FooterArchive />
+</BaseLayout>

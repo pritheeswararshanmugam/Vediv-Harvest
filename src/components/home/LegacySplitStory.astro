@@ -1,0 +1,40 @@
+---
+import SectionKicker from '../ui/SectionKicker.astro';
+import SectionHeading from '../ui/SectionHeading.astro';
+---
+
+<section class="bg-surface py-24">
+  <div class="mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
+    <div class="grid grid-cols-1 items-stretch gap-8 md:grid-cols-2 md:gap-12 lg:gap-16">
+      <div class="relative z-10 h-full">
+        <div class="h-full overflow-hidden rounded-[2.4rem] shadow-[0_24px_44px_rgba(62,39,35,0.14)] transition-transform duration-500 hover:-translate-y-2 hover:shadow-xl">
+          <img
+            src="https://images.unsplash.com/photo-1517244683847-7456b63c5969?auto=format&fit=crop&w=1400&q=80"
+            alt="Traditional spice handling in a warm artisan setting"
+            class="h-full w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="relative z-10 h-full rounded-[2.4rem] bg-dough p-8 shadow-[0_18px_36px_rgba(62,39,35,0.08)] md:p-12 lg:p-14">
+        <SectionKicker text="Our Legacy" />
+        <div class="mt-4">
+          <SectionHeading title="A Legacy in Every Grain" align="left" />
+        </div>
+
+        <p class="mt-6 font-body text-base leading-relaxed text-clove/78 md:text-lg">
+          Vedic Harvest began in 1951 with a singular belief: purity on the plate starts at the source.
+          Our family built long-standing relationships with farmers who cultivate spices and grains with
+          care, patience, and regional wisdom that cannot be industrialized.
+        </p>
+
+        <p class="mt-5 font-body text-base leading-relaxed text-clove/78 md:text-lg">
+          Today we continue that promise through mindful selection, hygienic sorting, and small-batch
+          packing. Every pack is designed to carry the aroma, color, and nourishment of Indian soil into
+          your kitchen, exactly as nature intended.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

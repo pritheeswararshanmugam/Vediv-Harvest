@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FloatingNav from '../components/site/FloatingNav.astro';
+import FooterArchive from '../components/site/FooterArchive.astro';
+---
+
+<BaseLayout
+  title="Our Heritage | Vedic Harvest"
+  description="Explore the fictional roots of Vedic Harvest and its legacy of purity since 1951."
+>
+  <FloatingNav />
+
+  <main class="pt-32 pb-20">
+    <section class="py-20 max-w-6xl mx-auto px-4">
+      <div class="rounded-[2.2rem] bg-surface px-8 py-14 md:px-14 md:py-16">
+        <p class="font-body text-xs font-semibold uppercase tracking-[0.2em] text-clove/60">Heritage Chronicle</p>
+        <h1 class="mt-4 font-heading text-5xl leading-tight text-clove md:text-6xl">Our Fictional Roots, Crafted with Purpose</h1>
+        <p class="mt-6 max-w-3xl font-body text-lg leading-relaxed text-clove/78">
+          Vedic Harvest was born as a fictional heritage house inspired by timeless Indian pantry traditions,
+          where every ingredient is curated for purity, aroma, and trust.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-20 max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
+        <article class="rounded-[2rem] bg-dough p-8 shadow-[0_14px_28px_rgba(62,39,35,0.08)]">
+          <h2 class="font-heading text-3xl text-clove">The Founding Vision</h2>
+          <p class="mt-4 font-body text-base leading-relaxed text-clove/78">
+            In our fictional narrative, Vedic Harvest began in 1951 as a small family collective that believed
+            true flavor starts at the source. The founders traveled farm clusters season by season,
+            selecting crops for natural aroma, vibrant color, and nutritional integrity.
+          </p>
+          <p class="mt-4 font-body text-base leading-relaxed text-clove/78">
+            That philosophy shaped a strict sourcing ritual: careful lot selection, transparent handling,
+            and quality-first decisions before every batch reached the pantry shelf.
+          </p>
+        </article>
+
+        <article class="rounded-[2rem] bg-dough p-8 shadow-[0_14px_28px_rgba(62,39,35,0.08)]">
+          <h2 class="font-heading text-3xl text-clove">The Heritage Promise</h2>
+          <p class="mt-4 font-body text-base leading-relaxed text-clove/78">
+            Today, that fictional heritage continues through modern hygiene standards and artisanal discipline.
+            Vedic Harvest prioritizes ingredient authenticity, minimal processing, and consistent food safety
+            so families can cook with confidence every day.
+          </p>
+          <p class="mt-4 font-body text-base leading-relaxed text-clove/78">
+            The result is a portfolio concept that feels grounded, premium, and culturally rooted,
+            while remaining entirely fictional for presentation and demonstration purposes.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <FooterArchive />
+</BaseLayout>

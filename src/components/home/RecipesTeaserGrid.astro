@@ -1,0 +1,62 @@
+---
+import SectionKicker from '../ui/SectionKicker.astro';
+import SectionHeading from '../ui/SectionHeading.astro';
+
+const recipes = [
+  {
+    title: 'Heritage Turmeric Kitchari',
+    href: '#',
+    image:
+      'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    title: 'Slow-Simmered Masoor Dal',
+    href: '#',
+    image:
+      'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    title: 'Smoky Chili Tempered Curry',
+    href: '#',
+    image:
+      'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1200&q=80',
+  },
+];
+---
+
+<section class="bg-dough py-24">
+  <div class="mx-auto max-w-7xl px-6 md:px-10">
+    <div class="max-w-2xl">
+      <SectionKicker text="Kitchen Chronicles" />
+      <div class="mt-4">
+        <SectionHeading title="Recipes Crafted for Everyday Rituals" align="left" />
+      </div>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
+      {
+        recipes.map((recipe) => (
+          <article class="group overflow-hidden rounded-[1.8rem] bg-surface shadow-[0_14px_28px_rgba(62,39,35,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_32px_rgba(62,39,35,0.11)]">
+            <div class="h-56 overflow-hidden">
+              <img
+                src={recipe.image}
+                alt={recipe.title}
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading text-2xl text-clove">{recipe.title}</h3>
+              <a
+                href={recipe.href}
+                class="mt-4 inline-flex items-center font-body text-sm font-medium text-clove/75 transition-colors duration-300 hover:text-chili"
+              >
+                View Recipe
+              </a>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
